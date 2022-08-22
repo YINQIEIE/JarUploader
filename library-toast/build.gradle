@@ -1,17 +1,17 @@
-plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
-//    id 'com.github.dcendents.android-maven'
-}
-apply plugin: 'maven-publish'
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'maven-publish'
+apply from:"../publishJavaLib.gradle"
 
 group = "com.github.YINQIEIE"
 android {
-    compileSdk 32
-
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
     defaultConfig {
-        minSdk 21
-        targetSdk 32
+//        applicationId "com.manjitech.jaruploader"
+        minSdkVersion 21
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
